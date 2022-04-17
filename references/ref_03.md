@@ -10,9 +10,9 @@
 
 int foo(int &x, int &y) 
 {
-	x = 3;
-	y = 4;
-	return x + y;
+	x = 3; // main'deki x = 3
+	y = 4; // maindeki x = 4
+	return x + y; //ret = 8
 }
 
 int main() 
@@ -22,6 +22,7 @@ int main()
 	int z = foo(x, x);
 
 	std::cout << x << y << z;
+	//428
 }
 
 ```
