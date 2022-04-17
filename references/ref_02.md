@@ -13,9 +13,9 @@ int &f2(int &r1, int &r2)
 
 void f1(int &r1, int &r2)
 {
-	r1 *= r2;
-	++f2(r1, r2); 
-	++f2(r2, r1); 
+	r1 *= r2; // x = 10 , y = 5
+	++f2(r1, r2); // x = 16 , y = 5
+	++f2(r2, r1); // x= 16 , y =22
 }
 
 #include <iostream>
@@ -27,6 +27,7 @@ int main()
 	f1(x, y);
 
 	std::cout << x << " " << y << "\n";
+	//16,22
 }
 
 ```
