@@ -11,9 +11,10 @@
 int main() 
 {
 	int ival = 1;
-	const int &r = ival > 0 ? ival : 1;
+	const int &r = ival > 0 ? ival : 1; // sağ taraftaki ifade r value ifadesi. -> &r 'in referansı ival'a değil , geçici bir değişkennin referansıdır.
 	ival = 5;
 	std::cout << ival << r;
+	// 51
 }
 ```
 
